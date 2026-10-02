@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Grade 3 English Certification</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Arial Rounded MT Bold","Trebuchet MS",Arial,sans-serif;color:#293753;background:#f7f9ff}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid #e7ebf5;box-shadow:0 4px 15px rgba(61,78,115,.08);backdrop-filter:blur(8px)}
+.top-in{max-width:1080px;margin:auto;padding:13px 18px}
+.title{display:flex;align-items:center;gap:12px;flex-wrap:wrap}h1{margin:0;flex:1;color:#536cc6;font-size:25px}
+.controls{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:13px}select{border:1px solid #d5dced;border-radius:10px;padding:7px;background:#fff}input{accent-color:#617bd8}
+.stop{border:0;border-radius:10px;background:#ee7e91;color:#fff;padding:8px 12px;font-weight:700;cursor:pointer}
+.nav{display:flex;gap:7px;overflow:auto;margin-top:10px}.nav a{white-space:nowrap;text-decoration:none;color:#5266b8;background:#f0f3ff;border:1px solid #dfe5fa;padding:7px 12px;border-radius:999px;font-weight:700;font-size:13px}
+main{max-width:1080px;margin:24px auto 60px;padding:0 18px}
+.tip{background:#fff6d9;border:2px solid #f3d77b;border-radius:18px;padding:13px 16px;line-height:1.55;margin-bottom:18px}
+.level{background:#fff;border:1px solid #e4e9f5;border-radius:24px;margin:20px 0;padding:20px 22px;box-shadow:0 8px 22px rgba(70,82,120,.07);scroll-margin-top:125px}
+.level-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding-bottom:13px;border-bottom:1px dashed #dce2ef;margin-bottom:10px}
+.level-kicker{font-size:10px;letter-spacing:2px;color:#9aa5bb;font-weight:700}h2{margin:2px 0 0;color:#536cc6;font-size:24px}
+.level-all{border:0;background:#5c7cda;color:#fff;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 3px 0 #4963b7}
+.content{max-width:820px}
+.sentence{display:flex;align-items:center;gap:12px;min-height:76px;padding:7px 0;border-bottom:1px solid #f0f2f7}
+.sentence:last-child{border-bottom:0}
+.speak{width:46px;height:46px;border:0;border-radius:50%;background:#6686df;color:#fff;font-size:20px;cursor:pointer;box-shadow:0 3px 0 #506bbd;flex:0 0 auto}
+.sentence-text{font-size:clamp(22px,3.7vw,32px);line-height:1.35;flex:1;min-width:0}
+.word{cursor:pointer;border-radius:7px;padding:1px 3px}.word:hover{background:#eef1ff;color:#4f62b6}
+.mini-art{width:62px;height:62px;flex:0 0 62px;border-radius:16px;background:#f4f7ff;display:flex;align-items:center;justify-content:center}
+.mini-art svg{width:54px;height:54px}
+.note{display:inline-block;margin-top:13px;background:#f8f6ff;color:#626b82;padding:9px 12px;border-radius:12px;font-size:13px}
+.number-grid{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0 58px}
+.number-grid button{border:1px solid #dce4f7;background:#f5f8ff;color:#526aa8;border-radius:10px;padding:8px 10px;cursor:pointer}
+footer{text-align:center;color:#919aae;font-size:13px;margin-top:30px}
+@media(max-width:650px){.top-in{padding:11px 12px}h1{font-size:20px}.controls{width:100%}.level{padding:16px 13px}.level-head{align-items:flex-start}.level-all{font-size:12px;padding:8px 10px}.sentence-text{font-size:22px}.mini-art{width:50px;height:50px;flex-basis:50px}.mini-art svg{width:44px;height:44px}.number-grid{margin-left:0}}
+</style></head>
+<body>
+<header class="top"><div class="top-in"><div class="title"><h1>🌈 Grade 3 English Certification</h1>
+<div class="controls"><span>速度</span><input id="speed" type="range" min="0.55" max="1.25" step="0.05" value="1.0"><span id="speedValue">1.00×</span>
+<label>聲音</label><select id="voice"><option>載入中…</option></select><button class="stop" onclick="stopSpeaking()">■ 停止</button></div></div>
+<nav class="nav"><a href="#level1">Level 1</a><a href="#level2">Level 2</a><a href="#level3">Level 3</a><a href="#level4">Level 4</a><a href="#level5">Level 5</a><a href="#level6">Level 6</a><a href="#level7">Level 7</a></nav></div></header>
+<main><div class="tip">💡 <b>小小點讀學習吧：</b>點 🔊 聽句子，點單字聽發音；也可以調整朗讀速度，慢慢練習。<br>🌟 <b>每天聽一聽、說一說，勇敢開口說英文，你會越來越棒！加油！</b></div>
+<section class="level" id="level1">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 1</h2></div><button class="level-all" onclick="speakGroup([&quot;What’s your name?&quot;, &quot;My name is Kevin.&quot;, &quot;one, two, three, four, five&quot;, &quot;six, seven, eight, nine, ten&quot;])">🔊 聽 Level 1</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;What’s your name?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;What’s&quot;)">What’s</span> <span class="word" onclick="speakWord(&quot;your&quot;)">your</span> <span class="word" onclick="speakWord(&quot;name&quot;)">name</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="38" r="25" fill="#FFE6A7"/><circle cx="31" cy="36" r="3" fill="#39445D"/><circle cx="49" cy="36" r="3" fill="#39445D"/><path d="M30 48q10 9 20 0" fill="none" stroke="#39445D" stroke-width="3" stroke-linecap="round"/><path d="M16 26q5-18 24-18t24 18" fill="#8BB8F2"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;My name is Kevin.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;My&quot;)">My</span> <span class="word" onclick="speakWord(&quot;name&quot;)">name</span> <span class="word" onclick="speakWord(&quot;is&quot;)">is</span> <span class="word" onclick="speakWord(&quot;Kevin&quot;)">Kevin</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="37" r="24" fill="#FFE6A7"/><path d="M18 30q7-23 23-23t23 23" fill="#8BB8F2"/><circle cx="32" cy="38" r="3" fill="#39445D"/><circle cx="48" cy="38" r="3" fill="#39445D"/><path d="M30 50q10 7 20 0" fill="none" stroke="#39445D" stroke-width="3"/><path d="M22 67h36" stroke="#7C8FE8" stroke-width="5" stroke-linecap="round"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;one, two, three, four, five&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;one&quot;)">one</span>, <span class="word" onclick="speakWord(&quot;two&quot;)">two</span>, <span class="word" onclick="speakWord(&quot;three&quot;)">three</span>, <span class="word" onclick="speakWord(&quot;four&quot;)">four</span>, <span class="word" onclick="speakWord(&quot;five&quot;)">five</span></div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" fill="#DFF3FF"/><text x="40" y="49" text-anchor="middle" font-size="25" font-weight="700" fill="#6681D7">1 2 3</text></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;six, seven, eight, nine, ten&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;six&quot;)">six</span>, <span class="word" onclick="speakWord(&quot;seven&quot;)">seven</span>, <span class="word" onclick="speakWord(&quot;eight&quot;)">eight</span>, <span class="word" onclick="speakWord(&quot;nine&quot;)">nine</span>, <span class="word" onclick="speakWord(&quot;ten&quot;)">ten</span></div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="30" fill="#DFF3FF"/><text x="40" y="49" text-anchor="middle" font-size="25" font-weight="700" fill="#6681D7">1 2 3</text></svg></div>
+        </div></div><div class="note">✏️ <b>Kevin</b> 可以換成自己的英文名字。</div><div class="number-grid"><button onclick="speakWord('one')">1 · one</button><button onclick="speakWord('two')">2 · two</button><button onclick="speakWord('three')">3 · three</button><button onclick="speakWord('four')">4 · four</button><button onclick="speakWord('five')">5 · five</button><button onclick="speakWord('six')">6 · six</button><button onclick="speakWord('seven')">7 · seven</button><button onclick="speakWord('eight')">8 · eight</button><button onclick="speakWord('nine')">9 · nine</button><button onclick="speakWord('ten')">10 · ten</button></div>
+    </section><section class="level" id="level2">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 2</h2></div><button class="level-all" onclick="speakGroup([&quot;How old are you?&quot;, &quot;I’m nine years old.&quot;, &quot;Are you hungry?&quot;, &quot;Yes, I am.&quot;])">🔊 聽 Level 2</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;How old are you?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;How&quot;)">How</span> <span class="word" onclick="speakWord(&quot;old&quot;)">old</span> <span class="word" onclick="speakWord(&quot;are&quot;)">are</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M20 61h40V36H20z" fill="#F7B2C2"/><path d="M17 36h46l-6-9H23z" fill="#FFD86B"/><circle cx="31" cy="24" r="4" fill="#FF8F8F"/><circle cx="49" cy="24" r="4" fill="#FF8F8F"/><path d="M40 27v-9" stroke="#FFB44D" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;I’m nine years old.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;I’m&quot;)">I’m</span> <span class="word" onclick="speakWord(&quot;nine&quot;)">nine</span> <span class="word" onclick="speakWord(&quot;years&quot;)">years</span> <span class="word" onclick="speakWord(&quot;old&quot;)">old</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#BFE5FF"/><text x="40" y="50" text-anchor="middle" font-size="30" font-weight="700" fill="#5B76CF">9</text><path d="M20 65q20-12 40 0" fill="none" stroke="#7D9BE8" stroke-width="4"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Are you hungry?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Are&quot;)">Are</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span> <span class="word" onclick="speakWord(&quot;hungry&quot;)">hungry</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFF0C7"/><path d="M22 48q18-22 36 0" fill="none" stroke="#E99A59" stroke-width="5"/><circle cx="30" cy="34" r="3" fill="#39445D"/><circle cx="50" cy="34" r="3" fill="#39445D"/><path d="M30 57q10 8 20 0" fill="none" stroke="#39445D" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Yes, I am.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Yes&quot;)">Yes</span>, <span class="word" onclick="speakWord(&quot;I&quot;)">I</span> <span class="word" onclick="speakWord(&quot;am&quot;)">am</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#CFF2D5"/><path d="M24 41l10 11 23-25" fill="none" stroke="#4EAD70" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div></div><div class="note">🎂 <b>nine</b> 可以換成自己的年齡。</div>
+    </section><section class="level" id="level3">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 3</h2></div><button class="level-all" onclick="speakGroup([&quot;Are you thirsty?&quot;, &quot;No, I’m not.&quot;, &quot;Here you are.&quot;])">🔊 聽 Level 3</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Are you thirsty?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Are&quot;)">Are</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span> <span class="word" onclick="speakWord(&quot;thirsty&quot;)">thirsty</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M25 19h30l-4 43H29z" fill="#BCE8FF" stroke="#5FAEDD" stroke-width="3"/><path d="M29 46h22" stroke="#5FAEDD" stroke-width="3"/><path d="M40 8c-8 10-8 15 0 20 8-5 8-10 0-20z" fill="#6FC6F1"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;No, I’m not.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;No&quot;)">No</span>, <span class="word" onclick="speakWord(&quot;I’m&quot;)">I’m</span> <span class="word" onclick="speakWord(&quot;not&quot;)">not</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M24 28h32l-5 38H29z" fill="#A9DDF8"/><path d="M24 28l9-12h14l9 12" fill="#F7C9E1"/><circle cx="34" cy="40" r="3" fill="#fff"/><circle cx="46" cy="40" r="3" fill="#fff"/><path d="M33 51q7 6 14 0" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Here you are.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Here&quot;)">Here</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span> <span class="word" onclick="speakWord(&quot;are&quot;)">are</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><rect x="17" y="27" width="46" height="35" rx="6" fill="#F6C7D9"/><path d="M17 34h46M31 27q0-10 9-10t9 10" fill="none" stroke="#D77B9A" stroke-width="4"/><path d="M26 46l8 8 20-20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg></div>
+        </div></div>
+    </section><section class="level" id="level4">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 4</h2></div><button class="level-all" onclick="speakGroup([&quot;Are you OK?&quot;, &quot;I’m good.&quot;, &quot;Thank you.&quot;, &quot;You&#x27;re welcome.&quot;])">🔊 聽 Level 4</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Are you OK?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Are&quot;)">Are</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span> <span class="word" onclick="speakWord(&quot;OK&quot;)">OK</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#CFF2D5"/><path d="M25 40l9 9 21-22" fill="none" stroke="#4EAD70" stroke-width="6" stroke-linecap="round"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;I’m good.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;I’m&quot;)">I’m</span> <span class="word" onclick="speakWord(&quot;good&quot;)">good</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFE8A9"/><path d="M27 41l9 9 19-20" fill="none" stroke="#E4A53A" stroke-width="6" stroke-linecap="round"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Thank you.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Thank&quot;)">Thank</span> <span class="word" onclick="speakWord(&quot;you&quot;)">you</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFE1EA"/><path d="M40 55S20 44 20 32c0-8 10-12 20-3 10-9 20-5 20 3 0 12-20 23-20 23z" fill="#F27E9B"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;You&#x27;re welcome.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;You&#x27;re&quot;)">You&#x27;re</span> <span class="word" onclick="speakWord(&quot;welcome&quot;)">welcome</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#E7DEFF"/><path d="M26 43q14 15 28 0" fill="none" stroke="#7768D4" stroke-width="4" stroke-linecap="round"/><path d="M29 34l-5-5M51 34l5-5" stroke="#7768D4" stroke-width="4" stroke-linecap="round"/></svg></div>
+        </div></div>
+    </section><section class="level" id="level5">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 5</h2></div><button class="level-all" onclick="speakGroup([&quot;What’s this?&quot;, &quot;It’s a kite.&quot;, &quot;What&#x27;s that?&quot;, &quot;It&#x27;s a ball.&quot;])">🔊 聽 Level 5</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;What’s this?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;What’s&quot;)">What’s</span> <span class="word" onclick="speakWord(&quot;this&quot;)">this</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#E5F3FF"/><path d="M25 47q15-25 30 0" fill="none" stroke="#5F91D6" stroke-width="5"/><circle cx="40" cy="30" r="8" fill="#FFD86B"/><path d="M40 48v14" stroke="#5F91D6" stroke-width="4"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;It’s a kite.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;It’s&quot;)">It’s</span> <span class="word" onclick="speakWord(&quot;a&quot;)">a</span> <span class="word" onclick="speakWord(&quot;kite&quot;)">kite</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M40 9l28 30-28 30-28-30z" fill="#F58EAA"/><path d="M40 9v60M12 39h56" stroke="#fff" stroke-width="2.5"/><path d="M40 69q-8 7 2 10" fill="none" stroke="#6688DB" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;What&#x27;s that?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;What&#x27;s&quot;)">What&#x27;s</span> <span class="word" onclick="speakWord(&quot;that&quot;)">that</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFF0C8"/><circle cx="31" cy="36" r="4" fill="#39445D"/><circle cx="49" cy="36" r="4" fill="#39445D"/><path d="M27 26l-6-7M53 26l6-7" stroke="#6688DB" stroke-width="4" stroke-linecap="round"/><path d="M29 52q11 7 22 0" fill="none" stroke="#39445D" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;It&#x27;s a ball.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;It&#x27;s&quot;)">It&#x27;s</span> <span class="word" onclick="speakWord(&quot;a&quot;)">a</span> <span class="word" onclick="speakWord(&quot;ball&quot;)">ball</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFAD78"/><path d="M18 42q22-17 44 0M31 14q10 12 1 26M51 52q-10 10 0 17" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+        </div></div>
+    </section><section class="level" id="level6">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 6</h2></div><button class="level-all" onclick="speakGroup([&quot;What color is it?&quot;, &quot;It&#x27;s green.&quot;, &quot;What color is it?&quot;, &quot;It’s yellow.&quot;, &quot;Try again.&quot;])">🔊 聽 Level 6</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;What color is it?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;What&quot;)">What</span> <span class="word" onclick="speakWord(&quot;color&quot;)">color</span> <span class="word" onclick="speakWord(&quot;is&quot;)">is</span> <span class="word" onclick="speakWord(&quot;it&quot;)">it</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M24 28h32l-5 38H29z" fill="#A9DDF8"/><path d="M24 28l9-12h14l9 12" fill="#F7C9E1"/><circle cx="34" cy="40" r="3" fill="#fff"/><circle cx="46" cy="40" r="3" fill="#fff"/><path d="M33 51q7 6 14 0" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;It&#x27;s green.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;It&#x27;s&quot;)">It&#x27;s</span> <span class="word" onclick="speakWord(&quot;green&quot;)">green</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#8ED28C"/><path d="M27 45q13-25 26 0" fill="none" stroke="#fff" stroke-width="5"/><path d="M40 30v28" stroke="#fff" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;What color is it?&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;What&quot;)">What</span> <span class="word" onclick="speakWord(&quot;color&quot;)">color</span> <span class="word" onclick="speakWord(&quot;is&quot;)">is</span> <span class="word" onclick="speakWord(&quot;it&quot;)">it</span>?</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M24 28h32l-5 38H29z" fill="#A9DDF8"/><path d="M24 28l9-12h14l9 12" fill="#F7C9E1"/><circle cx="34" cy="40" r="3" fill="#fff"/><circle cx="46" cy="40" r="3" fill="#fff"/><path d="M33 51q7 6 14 0" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;It’s yellow.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;It’s&quot;)">It’s</span> <span class="word" onclick="speakWord(&quot;yellow&quot;)">yellow</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#FFD95E"/><path d="M28 48q12-20 24 0" fill="none" stroke="#fff" stroke-width="5"/><circle cx="31" cy="35" r="3" fill="#fff"/><circle cx="49" cy="35" r="3" fill="#fff"/></svg></div>
+        </div><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;Try again.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;Try&quot;)">Try</span> <span class="word" onclick="speakWord(&quot;again&quot;)">again</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29" fill="#DDE7FF"/><path d="M25 49q15-25 30 0" fill="none" stroke="#6688DB" stroke-width="5"/><path d="M40 25v25" stroke="#6688DB" stroke-width="5" stroke-linecap="round"/></svg></div>
+        </div></div><div class="note">🎨 先聽一聽，再自己說一次！</div>
+    </section><section class="level" id="level7">
+      <div class="level-head"><div><div class="level-kicker">ENGLISH PRACTICE</div><h2>⭐ Level 7</h2></div><button class="level-all" onclick="speakGroup([&quot;I scream, you scream, we all scream for ice cream.&quot;])">🔊 聽 Level 7</button></div>
+      <div class="content"><div class="sentence">
+          <button class="speak" onclick="speakText(&quot;I scream, you scream, we all scream for ice cream.&quot;)">🔊</button>
+          <div class="sentence-text"><span class="word" onclick="speakWord(&quot;I&quot;)">I</span> <span class="word" onclick="speakWord(&quot;scream&quot;)">scream</span>, <span class="word" onclick="speakWord(&quot;you&quot;)">you</span> <span class="word" onclick="speakWord(&quot;scream&quot;)">scream</span>, <span class="word" onclick="speakWord(&quot;we&quot;)">we</span> <span class="word" onclick="speakWord(&quot;all&quot;)">all</span> <span class="word" onclick="speakWord(&quot;scream&quot;)">scream</span> <span class="word" onclick="speakWord(&quot;for&quot;)">for</span> <span class="word" onclick="speakWord(&quot;ice&quot;)">ice</span> <span class="word" onclick="speakWord(&quot;cream&quot;)">cream</span>.</div>
+          <div class="mini-art"><svg viewBox="0 0 80 80"><path d="M24 28h32l-5 38H29z" fill="#A9DDF8"/><path d="M24 28l9-12h14l9 12" fill="#F7C9E1"/><circle cx="34" cy="40" r="3" fill="#fff"/><circle cx="46" cy="40" r="3" fill="#fff"/><path d="M33 51q7 6 14 0" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+        </div></div><div class="note">🍦 先慢慢說，再挑戰流暢的節奏！</div>
+    </section>
+<footer>Grade 3 English Certification · Level 1–7<br>🌟 Have fun learning English! 🌟</footer></main>
+<script>
+let voices=[];
+function loadVoices(){voices=speechSynthesis.getVoices();const s=document.getElementById("voice");s.innerHTML="";const en=voices.filter(v=>/^en(-|_|$)/i.test(v.lang));const list=en.length?en:voices;list.forEach(v=>{const o=document.createElement("option");o.value=voices.indexOf(v);o.textContent=v.name+" ("+v.lang+")";s.appendChild(o)});const p=list.find(v=>/^en-US/i.test(v.lang))||list.find(v=>/^en-GB/i.test(v.lang));if(p)s.value=voices.indexOf(p)}
+speechSynthesis.onvoiceschanged=loadVoices;loadVoices();
+document.getElementById("speed").addEventListener("input",e=>document.getElementById("speedValue").textContent=Number(e.target.value).toFixed(2)+"×");
+function makeU(t){const u=new SpeechSynthesisUtterance(t);u.lang="en-US";u.rate=Number(document.getElementById("speed").value);const i=Number(document.getElementById("voice").value);if(voices[i])u.voice=voices[i];return u}
+function speakText(t){speechSynthesis.cancel();speechSynthesis.speak(makeU(t))}
+function speakWord(t){speakText(t)}function speakGroup(a){speechSynthesis.cancel();a.forEach(t=>speechSynthesis.speak(makeU(t)))}function stopSpeaking(){speechSynthesis.cancel()}
+</script></body></html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade 5 English Certification — Level 1–7</title>
+<style>
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:"Arial Rounded MT Bold","Trebuchet MS",Arial,sans-serif;background:#f4f8ff;color:#24324a}
+.topbar{position:sticky;top:0;z-index:20;background:#fff;padding:15px 18px;box-shadow:0 2px 12px rgba(45,78,125,.12)}
+.topbar-inner{max-width:1050px;margin:auto} .title-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h1{margin:0;color:#3567b8;font-size:25px;flex:1} .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.control{display:flex;align-items:center;gap:7px;font-size:14px} select{padding:7px 9px;border:1px solid #ccd7e8;border-radius:9px;background:#fff}
+input[type=range]{accent-color:#4d83df}
+.stop{border:0;background:#ef6b6b;color:#fff;border-radius:9px;padding:8px 12px;cursor:pointer;font-weight:bold}
+.level-nav{display:flex;gap:7px;overflow-x:auto;padding-top:12px;scrollbar-width:thin}
+.level-nav a{flex:0 0 auto;text-decoration:none;color:#3567b8;background:#eef5ff;border:1px solid #d5e3fa;padding:7px 12px;border-radius:999px;font-size:14px;font-weight:bold}
+.level-nav a:hover{background:#dfeaff}
+main{max-width:1050px;margin:24px auto 55px;padding:0 16px}
+.tip{background:#fff7d6;border-left:6px solid #f3c84b;padding:13px 15px;border-radius:10px;margin-bottom:20px;line-height:1.55}
+.level{background:#fff;border-radius:20px;padding:22px;margin:20px 0;box-shadow:0 5px 18px rgba(45,78,125,.09);scroll-margin-top:145px}
+.level-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.level-title{margin:0;color:#4a6fae;font-size:22px}
+.level-all{border:0;background:#4d83df;color:#fff;border-radius:11px;padding:9px 13px;cursor:pointer;font-weight:bold}
+.sentence{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:13px 0}
+.speak-btn{border:0;border-radius:50%;width:48px;height:48px;background:#4d83df;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 3px 8px rgba(77,131,223,.25);flex:0 0 auto}
+.speak-btn:hover{transform:translateY(-1px)} .speak-btn:active{transform:scale(.97)}
+.text{font-size:clamp(24px,4.5vw,36px);line-height:1.4;font-weight:500}
+.word{display:inline-block;cursor:pointer;border-radius:8px;padding:1px 4px;transition:.15s}
+.word:hover{background:#e8f0ff;color:#275cae}
+.phrase{margin-top:10px;padding:13px 15px;background:#f7f9fd;border-radius:12px;color:#5f6f88;font-size:14px}
+.footer{text-align:center;color:#7d899e;font-size:13px;margin-top:28px}
+@media(max-width:650px){.title-row{align-items:flex-start}h1{font-size:21px}.controls{width:100%}.control{flex:1}.level{padding:18px 15px}.level-header{align-items:flex-start}.level-all{font-size:12px;padding:8px 10px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+<div class="title-row">
+<h1>🎧 Grade 5 English Certification</h1>
+<div class="controls">
+<div class="control"><label for="speed">速度</label><input id="speed" type="range" min="0.55" max="1.25" value="0.85" step="0.05"><span id="speedValue">0.85×</span></div>
+<div class="control"><label for="voice">聲音</label><select id="voice"><option>載入中…</option></select></div>
+<button class="stop" onclick="stopSpeaking()">■ 停止</button>
+</div></div>
+<nav class="level-nav" aria-label="Levels">
+<a href="#level1">Level 1</a><a href="#level2">Level 2</a><a href="#level3">Level 3</a><a href="#level4">Level 4</a><a href="#level5">Level 5</a><a href="#level6">Level 6</a><a href="#level7">Level 7</a>
+</nav></div></header>
+<main>
+<div class="tip">💡 <strong>學生使用方式：</strong>點擊 🔊 朗讀整句；點擊句子中的<strong>單字</strong>可單獨聽發音。上方可以調整朗讀速度與英文聲音。</div>
+
+  <section class="level" id="level1">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 1</h2>
+      <button class="level-all" onclick='speakGroup(["Do you like coffee?", "No, I don’t. I like tea.", "Does she like bubble tea?", "Yes, she does.", "I’m thirsty. I need more water."])'>🔊 聽 Level 1</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Do you like coffee?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Do')">Do</span> <span class="word" onclick="speakWord('you')">you</span> <span class="word" onclick="speakWord('like')">like</span> <span class="word" onclick="speakWord('coffee')">coffee</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('No, I don’t. I like tea.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('No')">No</span>, <span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('don’t')">don’t</span>. <span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('like')">like</span> <span class="word" onclick="speakWord('tea')">tea</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Does she like bubble tea?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Does')">Does</span> <span class="word" onclick="speakWord('she')">she</span> <span class="word" onclick="speakWord('like')">like</span> <span class="word" onclick="speakWord('bubble')">bubble</span> <span class="word" onclick="speakWord('tea')">tea</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Yes, she does.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Yes')">Yes</span>, <span class="word" onclick="speakWord('she')">she</span> <span class="word" onclick="speakWord('does')">does</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('I’m thirsty. I need more water.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('I’m')">I’m</span> <span class="word" onclick="speakWord('thirsty')">thirsty</span>. <span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('need')">need</span> <span class="word" onclick="speakWord('more')">more</span> <span class="word" onclick="speakWord('water')">water</span>.</div>
+        </div>
+    
+  </section>
+  <section class="level" id="level2">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 2</h2>
+      <button class="level-all" onclick='speakGroup(["Does he like soy milk?", "No, he doesn’t. He likes lemonade.", "How many guavas do you need?", "I need seven guavas.", "Let’s have some tea and cake."])'>🔊 聽 Level 2</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Does he like soy milk?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Does')">Does</span> <span class="word" onclick="speakWord('he')">he</span> <span class="word" onclick="speakWord('like')">like</span> <span class="word" onclick="speakWord('soy')">soy</span> <span class="word" onclick="speakWord('milk')">milk</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('No, he doesn’t. He likes lemonade.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('No')">No</span>, <span class="word" onclick="speakWord('he')">he</span> <span class="word" onclick="speakWord('doesn’t')">doesn’t</span>. <span class="word" onclick="speakWord('He')">He</span> <span class="word" onclick="speakWord('likes')">likes</span> <span class="word" onclick="speakWord('lemonade')">lemonade</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('How many guavas do you need?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('How')">How</span> <span class="word" onclick="speakWord('many')">many</span> <span class="word" onclick="speakWord('guavas')">guavas</span> <span class="word" onclick="speakWord('do')">do</span> <span class="word" onclick="speakWord('you')">you</span> <span class="word" onclick="speakWord('need')">need</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('I need seven guavas.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('need')">need</span> <span class="word" onclick="speakWord('seven')">seven</span> <span class="word" onclick="speakWord('guavas')">guavas</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Let’s have some tea and cake.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Let’s')">Let’s</span> <span class="word" onclick="speakWord('have')">have</span> <span class="word" onclick="speakWord('some')">some</span> <span class="word" onclick="speakWord('tea')">tea</span> <span class="word" onclick="speakWord('and')">and</span> <span class="word" onclick="speakWord('cake')">cake</span>.</div>
+        </div>
+    
+  </section>
+  <section class="level" id="level3">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 3</h2>
+      <button class="level-all" onclick='speakGroup(["I have got a date at a quarter to eight; I’ll see you at the gate, so don’t be late."])'>🔊 聽 Level 3</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('I have got a date at a quarter to eight; I’ll see you at the gate, so don’t be late.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('have')">have</span> <span class="word" onclick="speakWord('got')">got</span> <span class="word" onclick="speakWord('a')">a</span> <span class="word" onclick="speakWord('date')">date</span> <span class="word" onclick="speakWord('at')">at</span> <span class="word" onclick="speakWord('a')">a</span> <span class="word" onclick="speakWord('quarter')">quarter</span> <span class="word" onclick="speakWord('to')">to</span> <span class="word" onclick="speakWord('eight')">eight</span>; <span class="word" onclick="speakWord('I’ll')">I’ll</span> <span class="word" onclick="speakWord('see')">see</span> <span class="word" onclick="speakWord('you')">you</span> <span class="word" onclick="speakWord('at')">at</span> <span class="word" onclick="speakWord('the')">the</span> <span class="word" onclick="speakWord('gate')">gate</span>, <span class="word" onclick="speakWord('so')">so</span> <span class="word" onclick="speakWord('don’t')">don’t</span> <span class="word" onclick="speakWord('be')">be</span> <span class="word" onclick="speakWord('late')">late</span>.</div>
+        </div>
+    <div class="phrase">🎤 這是繞口令／節奏練習。建議先點單字熟悉發音，再用慢速朗讀整句，最後逐漸加快。</div>
+  </section>
+  <section class="level" id="level4">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 4</h2>
+      <button class="level-all" onclick='speakGroup(["How many pineapples does she need?", "She needs six pineapples.", "What fruit do you like?", "I like sugar apples and wax apples.", "Let’s make fruit salad."])'>🔊 聽 Level 4</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('How many pineapples does she need?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('How')">How</span> <span class="word" onclick="speakWord('many')">many</span> <span class="word" onclick="speakWord('pineapples')">pineapples</span> <span class="word" onclick="speakWord('does')">does</span> <span class="word" onclick="speakWord('she')">she</span> <span class="word" onclick="speakWord('need')">need</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('She needs six pineapples.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('She')">She</span> <span class="word" onclick="speakWord('needs')">needs</span> <span class="word" onclick="speakWord('six')">six</span> <span class="word" onclick="speakWord('pineapples')">pineapples</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('What fruit do you like?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('What')">What</span> <span class="word" onclick="speakWord('fruit')">fruit</span> <span class="word" onclick="speakWord('do')">do</span> <span class="word" onclick="speakWord('you')">you</span> <span class="word" onclick="speakWord('like')">like</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('I like sugar apples and wax apples.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('like')">like</span> <span class="word" onclick="speakWord('sugar')">sugar</span> <span class="word" onclick="speakWord('apples')">apples</span> <span class="word" onclick="speakWord('and')">and</span> <span class="word" onclick="speakWord('wax')">wax</span> <span class="word" onclick="speakWord('apples')">apples</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Let’s make fruit salad.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Let’s')">Let’s</span> <span class="word" onclick="speakWord('make')">make</span> <span class="word" onclick="speakWord('fruit')">fruit</span> <span class="word" onclick="speakWord('salad')">salad</span>.</div>
+        </div>
+    
+  </section>
+  <section class="level" id="level5">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 5</h2>
+      <button class="level-all" onclick='speakGroup(["What day is today?", "It’s Sunday.", "Is it Monday today?", "No, it isn’t. It’s Tuesday.", "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday."])'>🔊 聽 Level 5</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('What day is today?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('What')">What</span> <span class="word" onclick="speakWord('day')">day</span> <span class="word" onclick="speakWord('is')">is</span> <span class="word" onclick="speakWord('today')">today</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('It’s Sunday.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('It’s')">It’s</span> <span class="word" onclick="speakWord('Sunday')">Sunday</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Is it Monday today?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Is')">Is</span> <span class="word" onclick="speakWord('it')">it</span> <span class="word" onclick="speakWord('Monday')">Monday</span> <span class="word" onclick="speakWord('today')">today</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('No, it isn’t. It’s Tuesday.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('No')">No</span>, <span class="word" onclick="speakWord('it')">it</span> <span class="word" onclick="speakWord('isn’t')">isn’t</span>. <span class="word" onclick="speakWord('It’s')">It’s</span> <span class="word" onclick="speakWord('Tuesday')">Tuesday</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Sunday')">Sunday</span>, <span class="word" onclick="speakWord('Monday')">Monday</span>, <span class="word" onclick="speakWord('Tuesday')">Tuesday</span>, <span class="word" onclick="speakWord('Wednesday')">Wednesday</span>, <span class="word" onclick="speakWord('Thursday')">Thursday</span>, <span class="word" onclick="speakWord('Friday')">Friday</span>, <span class="word" onclick="speakWord('Saturday')">Saturday</span>.</div>
+        </div>
+    <div class="phrase">📅 星期可以逐字點選練習，再按整句 🔊 練習連續說出一週七天。</div>
+  </section>
+  <section class="level" id="level6">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 6</h2>
+      <button class="level-all" onclick='speakGroup(["What’s your favorite subject?", "My favorite subject is English.", "What’s her favorite subject?", "Her favorite subject is science.", "I have cooking class on Friday."])'>🔊 聽 Level 6</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('What’s your favorite subject?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('What’s')">What’s</span> <span class="word" onclick="speakWord('your')">your</span> <span class="word" onclick="speakWord('favorite')">favorite</span> <span class="word" onclick="speakWord('subject')">subject</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('My favorite subject is English.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('My')">My</span> <span class="word" onclick="speakWord('favorite')">favorite</span> <span class="word" onclick="speakWord('subject')">subject</span> <span class="word" onclick="speakWord('is')">is</span> <span class="word" onclick="speakWord('English')">English</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('What’s her favorite subject?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('What’s')">What’s</span> <span class="word" onclick="speakWord('her')">her</span> <span class="word" onclick="speakWord('favorite')">favorite</span> <span class="word" onclick="speakWord('subject')">subject</span>?</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('Her favorite subject is science.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('Her')">Her</span> <span class="word" onclick="speakWord('favorite')">favorite</span> <span class="word" onclick="speakWord('subject')">subject</span> <span class="word" onclick="speakWord('is')">is</span> <span class="word" onclick="speakWord('science')">science</span>.</div>
+        </div>
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('I have cooking class on Friday.')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('I')">I</span> <span class="word" onclick="speakWord('have')">have</span> <span class="word" onclick="speakWord('cooking')">cooking</span> <span class="word" onclick="speakWord('class')">class</span> <span class="word" onclick="speakWord('on')">on</span> <span class="word" onclick="speakWord('Friday')">Friday</span>.</div>
+        </div>
+    
+  </section>
+  <section class="level" id="level7">
+    <div class="level-header">
+      <h2 class="level-title">⭐ Level 7</h2>
+      <button class="level-all" onclick='speakGroup(["How much wood would a woodchuck chuck if a woodchuck could chuck wood?"])'>🔊 聽 Level 7</button>
+    </div>
+    
+        <div class="sentence">
+          <button class="speak-btn" onclick="speakText('How much wood would a woodchuck chuck if a woodchuck could chuck wood?')">🔊</button>
+          <div class="text"><span class="word" onclick="speakWord('How')">How</span> <span class="word" onclick="speakWord('much')">much</span> <span class="word" onclick="speakWord('wood')">wood</span> <span class="word" onclick="speakWord('would')">would</span> <span class="word" onclick="speakWord('a')">a</span> <span class="word" onclick="speakWord('woodchuck')">woodchuck</span> <span class="word" onclick="speakWord('chuck')">chuck</span> <span class="word" onclick="speakWord('if')">if</span> <span class="word" onclick="speakWord('a')">a</span> <span class="word" onclick="speakWord('woodchuck')">woodchuck</span> <span class="word" onclick="speakWord('could')">could</span> <span class="word" onclick="speakWord('chuck')">chuck</span> <span class="word" onclick="speakWord('wood')">wood</span>?</div>
+        </div>
+    <div class="phrase">🎤 這是繞口令／節奏練習。建議先點單字熟悉發音，再用慢速朗讀整句，最後逐漸加快。</div>
+  </section>
+<div class="footer">Grade 5 English Certification · Level 1–7<br>本頁使用瀏覽器內建 English Text-to-Speech 功能。</div>
+</main>
+<script>
+let voices=[];
+function loadVoices(){
+  voices=speechSynthesis.getVoices();
+  const select=document.getElementById('voice'); select.innerHTML='';
+  const english=voices.filter(v=>/^en(-|_|$)/i.test(v.lang)); const list=english.length?english:voices;
+  list.forEach(v=>{const o=document.createElement('option');o.value=voices.indexOf(v);o.textContent=`${v.name} (${v.lang})`;select.appendChild(o);});
+  const preferred=list.find(v=>/^en-US/i.test(v.lang))||list.find(v=>/^en-GB/i.test(v.lang));
+  if(preferred) select.value=voices.indexOf(preferred);
+}
+speechSynthesis.onvoiceschanged=loadVoices; loadVoices();
+document.getElementById('speed').addEventListener('input',e=>document.getElementById('speedValue').textContent=`${Number(e.target.value).toFixed(2)}×`);
+function getRate(){return Number(document.getElementById('speed').value)}
+function makeUtterance(text){const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=getRate();u.pitch=1;const i=Number(document.getElementById('voice').value);if(voices[i])u.voice=voices[i];return u}
+function speakText(text){speechSynthesis.cancel();speechSynthesis.speak(makeUtterance(text))}
+function speakWord(word){speakText(word)}
+function speakGroup(texts){speechSynthesis.cancel();texts.forEach(t=>speechSynthesis.speak(makeUtterance(t)))}
+function stopSpeaking(){speechSynthesis.cancel()}
+</script>
+</body>
+</html>
