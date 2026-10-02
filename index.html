@@ -1,18 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8">
-  <title>英語學習護照</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英語學習護照</title>
+    <style>
+        /* 全域樣式設定 */
+        :root {
+            --primary-color: #4A90E2;
+            --hover-color: #357ABD;
+            --bg-color: #F4F7F6;
+            --card-bg: #FFFFFF;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        /* 隱藏預設的 ul 樣式 */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        /* 選項卡片樣式 */
+        .menu-list li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background-color: #F8FAFC;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* 滑鼠懸停效果 */
+        .menu-list li a:hover {
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+        }
+    </style>
 </head>
 <body>
-  <h1>英語學習護照選單</h1>
-  <ul>
-    <li><a href="Grade1.html">一年級</a></li>
-    <li><a href="Grade2.html">二年級</a></li>
-    <li><a href="Grade3.html">三年級</a></li>
-    <li><a href="Grade4.html">四年級</a></li>
-    <li><a href="Grade5.html">五年級</a></li>
-    <li><a href="Grade6.html">六年級</a></li>
-  </ul>
+
+    <div class="container">
+        <h1>📘 英語學習護照選單</h1>
+        <ul class="menu-list">
+            <li><a href="https://hresnoc-lang.github.io/115English-Learning-Passport/Grade1.html">一年級</a></li>
+            <li><a href="https://hresnoc-lang.github.io/115English-Learning-Passport/Grade2.html">二年級</a></li>
+            <li><a href="https://hresnoc-lang.github.io/115English-Learning-Passport/Grade3.html">三年級</a></li>
+            <li><a href="https://hresnoc-lang.github.io/115English-Learning-Passport/Grade4.html">四年級</a></li>
+            <li><a href="url?id=4">五年級</a></li>
+            <li><a href="https://hresnoc-lang.github.io/115English-Learning-Passport/Grade6.html">六年級</a></li>
+        </ul>
+    </div>
+
 </body>
 </html>
